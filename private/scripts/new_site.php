@@ -15,5 +15,3 @@ foreach ($env as $key => $value) {
 }
 print_r($env);
 echo "\n-------- END ENVIRONMENT ----------\n";
-
-

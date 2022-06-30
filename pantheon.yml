@@ -12,3 +12,4 @@ workflows:
       - type: webphp
         description: Run drush deploy after code sync
         script: private/scripts/sync.php
+
