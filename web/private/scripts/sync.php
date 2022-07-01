@@ -17,3 +17,13 @@ echo "\n------- START ENVIRONMENT ---------\n";
 
 echo "\n-------- END ENVIRONMENT ----------\n";
 
+
+print("\n==== Drupal Environment debugging ====\n");
+// Get paths for imports
+$path  = $_SERVER['DOCUMENT_ROOT'] . '/private/data';
+
+// Import database
+echo ('Importing Database from ...');
+echo "${path}/database.sql && drush cr";
+$cmd = "drush sql:cli < ${path}/database.sql && drush cr";
+//passthru($cmd);
