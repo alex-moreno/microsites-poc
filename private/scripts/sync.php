@@ -8,4 +8,3 @@ echo "\n========== END PAYLOAD ============\n";
 echo "\n------- START ENVIRONMENT ---------\n";
 
 echo "\n-------- END ENVIRONMENT ----------\n";
-
