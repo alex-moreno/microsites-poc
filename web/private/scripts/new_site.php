@@ -1,6 +1,6 @@
 <?php
 
-echo "Quicksilver Debuging Output: NEW SITE ";
+echo "Quicksilver Debuging Output: CREATING NEW SITE ";
 echo "\n\n";
 echo "\n========= START PAYLOAD ===========\n";
 print_r($_POST);
@@ -15,3 +15,13 @@ foreach ($env as $key => $value) {
 }
 print_r($env);
 echo "\n-------- END ENVIRONMENT ----------\n";
+
+print("\n==== Drupal Environment Initialization Starting ====\n");
+// Get paths for imports
+$path  = $_SERVER['DOCUMENT_ROOT'] . '/private/data';
+
+// Import database
+echo ('Importing Database from ...');
+echo "${path}/database.sql && drush cr";
+$cmd = "drush sql:cli < ${path}/database.sql && drush cr";
+//passthru($cmd);
