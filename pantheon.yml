@@ -7,3 +7,8 @@ workflows:
       - type: webphp
         description: Run drush deploy new site creation in dev
         script: private/scripts/new_site.php
+  sync_code:
+    after:
+      - type: webphp
+        description: Run drush deploy after code sync
+        script: private/scripts/sync.php
